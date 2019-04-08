@@ -32,8 +32,6 @@ router.post("/api/burgers", function (req, res) {
 
 router.put("/api/burger/:id", function (req, res) {
   let condition = "id = " + req.params.id;
-
-  console.log("devoured body: ", req.body.devoured);
   console.log("condition", condition);
   burger.updateOne({
     devoured: req.body.devoured

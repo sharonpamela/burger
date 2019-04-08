@@ -27,13 +27,12 @@ $(function() {
       let id = $(this).data("id");
       //let justDevoured = $(this).data("devoured");
   
-      console.log("craaaaaaaaazyyyyyyyyy");
       let newEatenState = {
         devoured: 1
       };
   
       // Send the PUT request.
-      $.ajax("/api/burgers/" + id, {
+      $.ajax("/api/burger/" + id, {
         type: "PUT",
         data: newEatenState
       }).then(
@@ -44,6 +43,29 @@ $(function() {
         }
       );
     });
+
+
+    // $(".changeEatStatus").on("click", function(event) {
+    //   var id = $(this).data("id");
+    //   var newSleep = $(this).data("newsleep");
+  
+    //   console.log("clicked a sleep button");
+    //   var newSleepState = {
+    //     sleepy: newSleep
+    //   };
+  
+    //   // Send the PUT request.
+    //   $.ajax("/api/burger/" + id, {
+    //     type: "PUT",
+    //     data: newSleepState
+    //   }).then(
+    //     function() {
+    //       console.log("changed sleep to", newSleep);
+    //       // Reload the page to get the updated list
+    //       location.reload();
+    //     }
+    //   );
+    // });
 
     // $(".delete-cat").on("click", function(event) {
     //   var id = $(this).data("id");
