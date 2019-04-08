@@ -12,8 +12,8 @@ router.get("/", function (req, res) {
     let hbsObject = {
       burger: data
     };
-    console.log(hbsObject.burger);
-    res.render("index", { burgers: hbsObject.burger });
+    console.log(hbsObject);
+    res.render("index", hbsObject); //hbsObject is an obj containing one key "burger" which contains a list of objects
   });
 });
 
