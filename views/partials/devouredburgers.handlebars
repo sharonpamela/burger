@@ -1,0 +1,10 @@
+
+<ul>
+    {{#each burgers}}
+    <span>{{burger_name}}</span>
+    <button class="change-eaten-status" data-id="{{id}}" data-devoured="{{devoured}}">
+        Devour!
+    </button>
+    <br>
+    {{/each}}
+</ul>
